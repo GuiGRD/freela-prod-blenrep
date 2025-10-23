@@ -1,0 +1,177 @@
+.section-mieloma-patologia {
+  position: relative;
+  padding: clamp(28px, vw(110), 110px) clamp(25px, vw(250), 250px) clamp(23px, vw(90), 90px);
+
+  @media screen and (max-width: $break-tablet) {
+    padding: clamp(28px, vw(110), 110px) 25px clamp(23px, vw(90), 90px);
+  }
+
+
+  .tag {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-orange-light;
+    border-radius: 999px;
+    padding: clamp(7px, vw(8), 8px) clamp(17px, vw(18), 18px) clamp(7px, vw(8), 8px) clamp(10px, vw(16), 16px);
+    width: fit-content;
+    margin-bottom: clamp(8px, vw(24), 24px);
+
+    @media screen and (max-width: $break-max-mobile) {
+      margin-left: unset;
+    }
+
+    svg {
+      width: clamp(19px, vw(28), 28px);
+      height: auto;
+      margin-right: 8px;
+    }
+
+    p {
+      flex: 1;
+      font-weight: 300;
+      font-size: clamp(12px, vw(18), 18px);
+      margin: 0;
+      color: $color-orange;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: $color-primary;
+    font-weight: 200;
+    font-size: clamp(22px, vw(60), 60px);
+    margin: 0 auto 0.26em;
+    max-width: 15em;
+    line-height: 1.23em;
+
+    @media screen and (max-width: $break-max-mobile) {
+      text-align: left;
+      max-width: unset;
+    }
+  }
+
+  .subtitle {
+    font-weight: 300;
+    font-size: clamp(13px, vw(24), 24px);
+    margin: 0 auto;
+    text-align: center;
+    max-width: 32em;
+    color: $color-gray;
+
+    @media screen and (max-width: $break-max-mobile) {
+      text-align: left;
+      max-width: unset;
+    }
+  }
+
+  .content {
+    margin-top: clamp(46px, vw(120), 120px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 41% 45%;
+    column-gap: 14%;
+    row-gap: 24px;
+    align-items: center;
+
+    @media screen and (max-width: $break-tablet) {
+      grid-template-columns: 45% 45%;
+      column-gap: 10%;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      h3 {
+        font-weight: 700;
+        font-size: clamp(22px, vw(40), 40px);
+        color: $color-primary;
+        margin-bottom: 0.4em;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: clamp(13px, vw(24), 24px);
+        margin-bottom: 1em;
+        color: $color-gray;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .right {
+      max-width: 500px;
+      margin: 0 auto;
+
+      .swiper {
+        width: 100%;
+        position: relative;
+
+        .swiper-wrapper {
+          width: 100%;
+
+          .swiper-slide {
+            width: 100% !important;
+            max-width: 100% !important;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .swiper-pagination {
+          top: clamp(13px, vw(26), 26px);
+          right: clamp(13px, vw(26), 26px);
+          bottom: unset;
+          left: unset;
+          width: min-content;
+          display: flex;
+          align-items: center;
+
+          .swiper-pagination-bullet {
+            margin: 0;
+            width: clamp(8px, vw(17), 17px);
+            height: clamp(8px, vw(17), 17px);
+            background-color: $color-primary;
+            border: solid $color-primary clamp(1.51px, vw(3), 3px);
+            opacity: 1;
+            transition: all .3s ease-in-out;
+
+            &:first-child {
+              margin-right: clamp(3px, vw(7), 7px);
+            }
+
+            &-active {
+              width: clamp(10px, vw(21), 21px);
+              height: clamp(10px, vw(21), 21px);
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .detail-bg {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    width: clamp(200px, vw(432), 432px);
+    height: auto;
+
+    path {
+      transform-origin: bottom right ;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      display: none;
+    }
+  }
+}

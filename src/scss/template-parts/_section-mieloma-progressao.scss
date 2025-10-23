@@ -1,0 +1,201 @@
+.section-mieloma-progressao {
+  position: relative;
+  padding: 0 0 clamp(65px, vw(90), 90px);
+
+  .bg {
+    padding: clamp(38px, vw(86), 86px) clamp(25px, vw(250), 250px) clamp(35px, vw(82), 82px);
+    background-image: url('../img/mieloma/bg-prog.svg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $break-tablet) {
+      padding: clamp(38px, vw(86), 86px) 25px clamp(35px, vw(82), 82px);
+    }
+  }
+
+  .tag {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: $color-green-dark, $alpha: 0.3);
+    border-radius: 999px;
+    padding: clamp(7px, vw(8), 8px) clamp(17px, vw(18), 18px) clamp(7px, vw(8), 8px) clamp(10px, vw(16), 16px);
+    width: fit-content;
+    margin-bottom: clamp(8px, vw(24), 24px);
+
+    @media screen and (max-width: $break-max-mobile) {
+      margin-left: unset;
+    }
+
+    svg {
+      width: clamp(19px, vw(28), 28px);
+      height: auto;
+      margin-right: 8px;
+    }
+
+    p {
+      flex: 1;
+      font-weight: 300;
+      font-size: clamp(12px, vw(18), 18px);
+      margin: 0;
+      color: $color-primary;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: $color-primary;
+    font-weight: 200;
+    font-size: clamp(22px, vw(40), 40px);
+    margin: 0 auto 0.4em;
+    max-width: 23em;
+    line-height: 1.5em;
+
+    @media screen and (max-width: $break-max-mobile) {
+      text-align: left;
+      max-width: unset;
+    }
+  }
+
+  .subtitle {
+    font-weight: 300;
+    text-align: center;
+    font-size: clamp(13px, vw(24), 24px);
+    margin: 0 auto clamp(32px, vw(85), 85px);
+    max-width: 37em;
+
+    span {
+      font-weight: 700;
+      font-size: 1.45em;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      text-align: left;
+      max-width: unset;
+    }
+  }
+
+  .box {
+    display: block;
+    margin: 0 auto;
+    background-color: #F8F3F0;
+    border-radius: clamp(14px, vw(38), 38px);
+    padding: clamp(7px, vw(18), 18px) clamp(7px, vw(18), 18px) clamp(11px, vw(28), 28px);
+    box-shadow: 4.828px 4.828px 24.141px 0 rgba(0, 0, 0, 0.20);
+    width: clamp(324px, vw(841), 841px);
+    max-width: 100%;
+    margin-bottom: clamp(23px, vw(26), 26px);
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: clamp(15px, vw(27), 27px);
+    }
+
+    .txt-ref {
+      font-weight: 300;
+      text-align: center;
+      font-size: clamp(8px, vw(15), 15px);
+      margin: 0;
+    }
+  }
+
+  .txt-1 {
+    font-weight: 300;
+    font-size: clamp(16px, vw(23), 23px);
+    text-align: center;
+    color: $color-secondary;
+    max-width: 36em;
+    margin: 0 auto clamp(23px, vw(99), 99px);
+  }
+
+  .txt-2 {
+    font-weight: 700;
+    font-size: clamp(22px, vw(40), 40px);
+    text-align: center;
+    color: $color-secondary;
+    max-width: 24em;
+    margin: 0 auto 0.4em;
+  }
+
+  .txt-3 {
+    font-weight: 300;
+    font-size: clamp(16px, vw(35), 35px);
+    text-align: center;
+    color: $color-secondary;
+    max-width: 24em;
+    margin: 0 auto;
+  }
+
+  .container-timeline {
+    padding-left: clamp(25px, vw(272), 272px);
+    padding-right: clamp(25px, vw(265), 265px);
+    margin-top: -1%;
+    margin-bottom: clamp(26px, vw(48), 48px);
+
+    @media screen and (max-width: $break-max-mobile) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    #timeline {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+
+      @media screen and (max-width: $break-max-mobile) {
+        display: none;
+      }
+
+      #diagnostico-inicial,
+      #number-1,
+      #primeira-recaida,
+      #number-2,
+      #segunda-recaida,
+      #number-3,
+      #seta {
+        opacity: 0;
+      }
+    }
+
+    #timeline-mb {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      display: none;
+      margin: 0 auto;
+
+      @media screen and (max-width: $break-max-mobile) {
+        display: block;
+      }
+
+      #diagnostico-inicial-mb,
+      #number-1-mb,
+      #primeira-recaida-mb,
+      #number-2-mb,
+      #segunda-recaida-mb,
+      #number-3-mb,
+      #seta-mb {
+        opacity: 0;
+      }
+    }
+  }
+
+  .txt-bottom {
+    font-weight: 700;
+    font-size: clamp(18px, vw(24), 24px);
+    color: $color-orange;
+    text-align: center;
+    max-width: 35em;
+    margin: 0 auto;
+    opacity: 0;
+    padding: 0 25px;
+
+    @media screen and (max-width: $break-max-mobile) {
+      text-align: left;
+      max-width: 100%;
+    }
+  }
+}

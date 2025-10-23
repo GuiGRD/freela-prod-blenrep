@@ -1,0 +1,112 @@
+footer {
+  padding:
+    clamp(65px, vw(90), 90px)
+    clamp(24px, vw(175), 175px)
+    clamp(40px, vw(160), 160px);
+
+  @media (max-width: $break-max-mobile) {
+    padding:
+    clamp(65px, vw(90), 90px)
+    24px
+    clamp(40px, vw(150), 150px);
+  }
+
+  h2 {
+    font-family: $font-GSKPrecision;
+    font-weight: 700;
+    font-size: clamp(24px, vw(34), 34px);
+    margin-bottom: 0.31em;
+    color: $color-primary;
+  }
+
+  .txt-info {
+    font-family: $font-GSKPrecision;
+    font-weight: 400;
+    font-size: clamp(14px, vw(22), 22px);
+    margin-bottom: 1.14em;
+    color: $color-primary;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .txt-disclaimer {
+    font-family: $font-GSKPrecision;
+    font-weight: 400;
+    color: $color-primary;
+    font-size: clamp(14px, vw(16), 16px);
+    margin-bottom: 2em;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: $break-tablet) {
+      width: 100%;
+      gap: 42px;
+    }
+
+    @media (max-width: $break-max-mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .links {
+      color: $color-primary;
+      font-family: $font-GSKPrecision;
+      font-weight: 700;
+      font-size: clamp(12px, vw(14), 14px);
+      margin: 0;
+      width: fit-content;
+      
+      @media (max-width: $break-max-mobile) {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      @media (max-width: $break-max-mobile) {
+        align-items: center;
+      }
+
+      p {
+        font-family: $font-GSKPrecision;
+        font-weight: 400;
+        font-size: clamp(12px, vw(14), 14px);
+        color: $color-primary;
+        text-align: right;
+        margin-bottom: 0.57em;
+
+        @media (max-width: $break-max-mobile) {
+          text-align: center;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

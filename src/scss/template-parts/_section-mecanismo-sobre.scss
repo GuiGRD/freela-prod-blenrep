@@ -1,0 +1,343 @@
+.section-mecanismo-sobre {
+  position: relative;
+  padding: 0;
+
+  .content {
+    display: grid;
+    grid-template-columns: 42% 48%;
+    column-gap: 10%;
+    align-items: center;
+    padding: clamp(23px, vw(63), 63px) clamp(25px, vw(138), 138px) 0 clamp(25px, vw(250), 250px);
+
+    @media screen and (max-width: $break-tablet) {
+      padding: clamp(23px, vw(63), 63px) 25px 0;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      .tag {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-orange-light;
+        border-radius: 999px;
+        padding: clamp(7px, vw(8), 8px) clamp(17px, vw(18), 18px) clamp(7px, vw(8), 8px) clamp(10px, vw(16), 16px);
+        width: fit-content;
+        margin-bottom: clamp(8px, vw(24), 24px);
+
+        @media screen and (max-width: $break-max-mobile) {
+          margin-left: unset;
+        }
+
+        svg {
+          width: clamp(19px, vw(28), 28px);
+          height: auto;
+          margin-right: 8px;
+        }
+
+        p {
+          flex: 1;
+          font-weight: 300;
+          font-size: clamp(12px, vw(18), 18px);
+          margin: 0;
+          color: $color-orange;
+        }
+      }
+
+      h2 {
+        font-weight: 200;
+        font-size: clamp(22px, vw(60), 60px);
+        color: $color-primary;
+        margin-bottom: 0.26em;
+        line-height: 1.23em;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: clamp(13px, vw(24), 24px);
+        color: $color-gray;
+        margin: 0;
+      }
+    }
+
+    .right {
+      @media screen and (max-width: $break-max-mobile) {
+        display: none;
+      }
+
+      .image {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .cards {
+    margin-top: clamp(46px, vw(80), 80px);
+    padding: 0 clamp(25px, vw(245), 245px);
+    display: grid;
+    grid-template-columns: 14% 84%;
+    column-gap: 2%;
+
+    @media screen and (max-width: $break-tablet) {
+      padding: 0 25px;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    &__pagination {
+      display: flex;
+
+      @media screen and (max-width: $break-max-mobile) {
+        display: none;
+      }
+
+      &-line {
+        width: 3px;
+        min-width: 3px;
+        height: clamp(200px, vw(305), 305px);
+        border-radius: 99px;
+        background-color: #EDEDED;
+        position: relative;
+
+        .drag {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: clamp(79px, vw(99), 99px);
+          background: #EDEDED;
+          background: linear-gradient(180deg, rgba(237, 237, 237, 1) 0%, rgba(105, 105, 105, 0.8) 31%, rgba(237, 237, 237, 1) 95%);
+          border-radius: 99px;
+          transition: all .3s ease-in-out;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 38%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: $color-gray;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &-itens {
+        flex: 1;
+
+        .item {
+          font-weight: 300;
+          color: $color-gray;
+          font-size: clamp(15px, vw(20), 20px);
+          transition: all .3s ease-in-out;
+          margin-bottom: 2.05em;
+          padding-left: clamp(15px, vw(23), 23px);
+
+          &:first-child {
+            margin-top: clamp(18px, vw(28), 28px);
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &--active {
+            color: $color-primary;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &:has(.item-2.item--active) {
+        .drag {
+          top: 23.5%;
+        }
+      }
+
+      &:has(.item-3.item--active) {
+        .drag {
+          top: 52%;
+        }
+      }
+    } 
+
+    &__box {
+      position: relative;
+      overflow: hidden;
+
+      &-card {
+        width: 100%;
+        min-height: clamp(450px, vw(544), 544px);
+        border-radius: clamp(8px, vw(32), 32px);
+        background-color: #f7f7f7;
+        padding: clamp(13px, vw(50), 50px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(100%);
+
+        &:first-child {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        &:nth-child(2) {
+          position: initial;
+        }
+
+        @media screen and (max-width: $break-max-mobile) {
+          position: initial;
+          opacity: 1;
+          transform: unset;
+          margin-bottom: 22px;
+          min-height: unset;
+          height: unset;
+          background-color: #ededed;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        h2 {
+          font-weight: 200;
+          color: $color-primary;
+          font-size: clamp(16px, vw(40), 40px);
+          margin-bottom: 0.2em;
+
+          @media screen and (max-width: $break-max-mobile) {
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-bottom: 0.5em;
+          }
+        }
+
+        p {
+          font-weight: 300;
+          font-size: clamp(12px, vw(20), 20px);
+        }
+
+        .flx {
+          display: flex;
+          align-items: center;
+
+          @media screen and (max-width: $break-max-mobile) {
+            flex-direction: column;
+            margin-top: 38px;
+          }
+
+          img {
+            width: clamp(120px, vw(210), 210px);
+            height: auto;
+            margin-right: clamp(15px, vw(36), 36px);
+
+            @media screen and (max-width: $break-max-mobile) {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: clamp(12px, vw(16), 16px);
+            margin: 0;
+            flex: 1;
+
+            &.txt-2 {
+              flex: 1.3;
+            }
+
+            @media screen and (max-width: $break-max-mobile) {
+              text-align: center;
+            }
+          }
+
+          svg {
+            width: clamp(30px, vw(40), 40px);
+            height: auto;
+            margin: 0 clamp(20px, vw(40), 40px);
+
+            @media screen and (max-width: $break-max-mobile) {
+              transform: rotate(90deg);
+              margin: 15px 0;
+            }
+          }
+        }
+
+        .flx-2 {
+          display: flex;
+          align-items: center;
+          margin-top: 37px;
+
+          @media screen and (max-width: $break-max-mobile) {
+            flex-direction: column-reverse;
+          }
+
+          .card {
+            border-radius: clamp(24px, vw(24), 24px);
+            overflow: hidden;
+            background-color: #EFEBE2;
+            flex: 1;
+
+            .header {
+              background-color:$color-green-dark;
+              padding: clamp(10px, vw(10), 10px);
+
+              p {
+                text-align: center;
+                margin: 0;
+                font-weight: 700;
+                font-size: clamp(15px, vw(20), 20px);
+                color: $color-secondary;
+              }
+            }
+
+            .body {
+              padding: clamp(10px, vw(10), 10px);
+
+              p {
+                text-align: center;
+                font-size: clamp(12px, vw(16), 16px);
+                margin: 0;
+              }
+            }
+          }
+
+          .img-center {
+            width: clamp(242px, vw(392), 392px);
+            height: auto;
+
+            @media screen and (max-width: $break-max-mobile) {
+              margin-bottom: -8px;
+            }
+          }
+        }
+      }
+    }
+
+    .details {
+      position: absolute;
+      left: 0;
+      top: 17%;
+      width: clamp(200px, vw(381), 381px);
+      height: auto;
+      z-index: -1;
+
+      path {
+        transform-origin: bottom left;
+      }
+
+      @media screen and (max-width: $break-max-mobile) {
+        display: none;
+      }
+    }
+  }
+}

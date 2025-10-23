@@ -1,0 +1,105 @@
+.section-refs {
+  padding:
+  clamp(60px, vw(130), 130px)
+  clamp(24px, vw(175), 175px)
+  0; 
+
+  @media (max-width: $break-max-mobile) {
+    padding:
+    clamp(65px, vw(90), 90px)
+    24px
+    0;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-primary;
+    margin-bottom: clamp(60px, vw(130), 130px);
+  }
+
+  h2 {
+    font-family: $font-Poppins;
+    font-weight: 700;
+    font-size: clamp(24px, vw(34), 34px);
+    margin-bottom: 0.66em;
+    color: $color-primary;
+  }
+
+  h3 {
+    font-family: $font-Poppins;
+    font-weight: 700;
+    font-size: clamp(20px, vw(24), 24px);
+    margin-bottom: 0.5em;
+    color: $color-primary;
+  }
+
+  p {
+    font-family: $font-Poppins;
+    font-weight: 400;
+    font-size: clamp(14px, vw(18), 18px);
+    color: $color-primary;
+    margin-bottom: 2em;
+
+    &.margin {
+      margin-bottom: clamp(60px, vw(130), 130px);
+    }
+  }
+
+  .box-ref {
+    width: 100%;
+    border: 2px solid $color-primary;
+    border-radius: clamp(8px, vw(16), 16px);
+    margin-top: clamp(60px, vw(130), 130px);
+
+    .head {
+      padding: clamp(16px, vw(20), 20px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+        font-family: $font-Poppins;
+        font-weight: 700;
+        font-size: clamp(18px, vw(28), 28px);
+        color: $color-primary;
+      }
+
+      svg {
+        width: clamp(18px, vw(27), 27px);
+        height: auto;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .body {
+      padding: clamp(16px, vw(32), 32px);
+      padding-top: 0;
+      display: none;
+
+      ol {
+        padding-left: clamp(24px, vw(20), 20px);
+
+        li {
+          list-style-type: decimal;
+          font-family: $font-Poppins;
+          font-weight: 300;
+          font-size: clamp(13px, vw(16), 16px);
+          color: $color-primary;
+          margin-bottom: 0.4em;
+          word-break: break-word;
+        }
+      }
+    }
+
+    &.active {
+      .head {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

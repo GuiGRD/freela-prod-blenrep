@@ -1,0 +1,113 @@
+body {
+  background-color: $color-secondary;
+  color: $color-primary;
+  font-family: $font-Poppins;
+  font-size: 16px;
+  overflow-x: hidden;
+  padding-top: clamp(30px, vw(50), 50px);
+
+   @media screen and (max-width: $break-max-mobile) {
+    padding-top: 60px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+section {
+  padding: clamp(25px, vw(150), 150px);
+  padding-top: clamp(48px, vw(130), 130px);
+  padding-bottom: clamp(10px, vw(70), 70px);
+}
+
+sup {
+  font-size: 0.6em;
+  line-height: 1em;
+}
+
+img {
+  user-select: none;
+}
+
+h1 {
+  color: $color-primary;
+  font-family: $font-Poppins;
+  font-weight: 300;
+  font-size: clamp(22px, vw(32), 32px);
+  margin: 0;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+h2 {
+  color: $color-orange;
+  font-family: $font-Poppins;
+  font-size: clamp(32px, vw(80), 80px);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  color: $color-orange;
+  font-family: $font-Poppins;
+  font-size: clamp(32px, vw(80), 80px);
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+p {
+  color: $color-primary;
+  font-family: $font-Poppins;
+  font-weight: 400;
+  font-size: clamp(16px, vw(32), 32px);
+  line-height: normal;
+  margin-bottom: 1em;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: zoomInOut 2s infinite;
+
+  .img-main {
+    width: clamp(250px, vw(300), 300px);
+    height: auto;
+  }
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

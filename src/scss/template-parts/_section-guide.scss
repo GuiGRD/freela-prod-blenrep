@@ -1,0 +1,38 @@
+.section-guide {
+  padding:
+  clamp(60px, vw(130), 130px)
+  clamp(24px, vw(175), 175px)
+  0;
+
+  @media (max-width: $break-max-mobile) {
+    padding:
+    clamp(65px, vw(90), 90px)
+    24px
+    0;
+  }
+
+  h2 {
+    font-family: $font-Poppins;
+    font-weight: 700;
+    font-size: clamp(24px, vw(34), 34px);
+    margin-bottom: 0.31em;
+    color: $color-primary;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: clamp(5px, vw(10), 10px);
+    border: 2px solid $color-primary;
+    padding: clamp(7px, vw(14), 14px) clamp(10px, vw(20), 20px);
+
+    p {
+      font-family: $font-Poppins;
+      font-weight: 300;
+      font-size: clamp(16px, vw(23), 23px);
+      color: $color-primary;
+      margin: 0;
+    }
+  }
+}

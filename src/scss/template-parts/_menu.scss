@@ -1,0 +1,224 @@
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: clamp(8px, vw(16), 16px) clamp(8px, vw(16), 16px) 0 0;
+  padding: clamp(12px, vw(23), 23px) clamp(18px, vw(25), 25px);
+  background-color: $color-orange-light;
+  z-index: 9;
+  min-width: clamp(600px, vw(920), 920px);
+
+  &.active {
+    @media (max-width: $break-max-mobile) {
+      transform: translateX(0);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $break-max-mobile) {
+      display: none;
+    }
+    
+    &-item {
+      margin-right: clamp(30px, vw(60), 60px);
+      cursor: pointer;
+      transition: all .15s ease-in-out;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: $break-max-mobile) {
+        margin: 0;
+        margin-bottom: 25px;
+      }
+    
+      svg {
+        width: clamp(14px, vw(28), 28px);
+        height: auto;
+        margin-right: clamp(4px, vw(8), 8px);
+        display: none;
+      }
+
+      .text {
+        position: relative;
+
+        &:after {
+          white-space: nowrap;
+          color: $color-primary;
+          font-family: $font-Poppins;
+          font-weight: 300;
+          font-size: clamp(13px, vw(18), 18px);
+          margin: 0;
+          text-align: center;
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: all .3s ease-in-out;
+        }
+
+        .icon {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: clamp(22px, vw(44), 44px);
+          height: auto;
+          display: block;
+          opacity: 0;
+          transition: all .3s ease-in-out;
+        }
+
+        p {
+          white-space: nowrap;
+          color: $color-primary;
+          font-family: $font-Poppins;
+          font-weight: 700;
+          font-size: clamp(13px, vw(18), 18px);
+          margin: 0;
+          text-align: center;
+          transition: all .3s ease-in-out;
+          opacity: 0;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+
+      &.active {
+        pointer-events: none;
+
+        svg {
+          display: block;
+        }
+
+        .text {
+          &:after {
+            font-weight: 700;
+            color: $color-orange;
+          }
+          
+          .icon {
+            opacity: 1;
+          }
+        }
+        
+      }
+
+      &:hover {
+        .text {
+          &:after {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  &.home {
+    padding: 0;
+
+    .menu__list {
+      display: none;
+    }
+  }
+
+  @media (max-width: $break-max-mobile) {
+    top: 60px;
+    bottom: unset;
+    left: 0;
+    height: calc(100dvh - 60px);
+    width: 100%;
+    transform: translateX(-100%);
+    border-radius: unset;
+    background: $color-secondary;
+    padding: 25px !important;
+    overflow-y: auto;
+    min-width: unset;
+    transition: all .4s ease-in-out;
+  }
+
+  .menu__mb {
+    display: none;
+
+    @media (max-width: $break-max-mobile) {
+      display: block;
+    }
+
+    .lnk-products {
+      font-family: $font-Poppins;
+      font-weight: 400;
+      font-size: 20px;
+      margin: 0;
+      display: block;
+      width: 100%;  
+      border-bottom: solid 1px rgba($color: $color-primary, $alpha: 0.1);
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      li {
+        display: block;
+        width: 100%;  
+        border-bottom: solid 1px rgba($color: $color-primary, $alpha: 0.1);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        
+        &:last-child {
+          border: none;
+        }
+
+        .txt {
+          display: flex;
+          align-items: center;
+
+          p {
+            font-family: $font-Poppins;
+            font-weight: 400;
+            font-size: 20px;
+            margin: 0;
+            margin-right: 16px;
+          }
+
+          svg {
+            width: 16px;
+            height: auto;
+            transition: all .3s ease-in-out;
+          }
+        }
+
+        
+        &.active {
+          .txt svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        ul {
+          display: none;
+          
+          li {
+            padding: 0;
+            margin: 0;
+            border: none;
+            font-family: $font-Poppins;
+            font-weight: 300;
+            font-size: 16px;
+            color: $color-orange;
+            margin-top: 1em;
+          }
+        }
+      }
+    }
+  }
+}

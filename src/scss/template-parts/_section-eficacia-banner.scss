@@ -1,0 +1,45 @@
+.section-eficacia-banner {
+  position: relative;
+  padding: clamp(20px, vw(32), 32px) clamp(25px, vw(32), 32px) 0;
+
+  @media screen and (max-width: $break-tablet) {
+    padding: clamp(20px, vw(32), 32px) 25px 0;
+  }
+
+  .box {
+    background-image: url('../img/eficacia/banner.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: clamp(8px, vw(16), 16px);
+    overflow: hidden;
+    width: 100%;
+    height: clamp(177px, vw(539), 539px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 clamp(16px, vw(218), 218px);
+
+    @media screen and (max-width: 600px) {
+      background-image: url('../img/eficacia/banner-mb.png');
+      padding: 0 16px;
+    }
+
+    h1 {
+      font-family: $font-Poppins;
+      font-weight: 300;
+      color: $color-orange;
+      font-size: clamp(22px, vw(100), 100px);
+      margin-bottom: 0;
+      max-width: 6em;
+      line-height: 1.1em;
+    }
+
+    .txt-subtitle {
+      font-weight: 300;
+      font-size: clamp(12px, vw(42), 42px);
+      margin-bottom: 0;
+      max-width: 67%;
+    }
+  }
+}

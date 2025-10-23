@@ -1,0 +1,32 @@
+// Utitlies
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/responsive";
+
+// Base Styles
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/global";
+
+// Includes
+@import "./inc/header";
+@import "./inc/footer";
+
+// // Template Parts
+@import './template-parts/menu';
+@import './template-parts/section-home';
+@import './template-parts/section-mieloma-banner';
+@import './template-parts/section-mieloma-patologia';
+@import './template-parts/section-mieloma-sinais';
+@import './template-parts/section-mieloma-progressao';
+@import './template-parts/section-mieloma-tratamento';
+@import './template-parts/section-mecanismo-banner';
+@import './template-parts/section-mecanismo-sobre';
+@import './template-parts/section-mecanismo-moa';
+@import './template-parts/section-eficacia-banner';
+@import './template-parts/section-eficacia-estudos';
+@import './template-parts/section-eficacia-posologia';
+@import './template-parts/section-eficacia-seguranca';
+@import './template-parts/section-refs';
+@import './template-parts/section-guide';

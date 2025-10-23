@@ -1,0 +1,140 @@
+.section-mieloma-tratamento {
+  position: relative;
+  padding: clamp(23px, vw(96), 96px) clamp(25px, vw(265), 265px) clamp(20px, vw(40), 40px) clamp(25px, vw(131), 131px);
+
+  @media screen and (max-width: $break-tablet) {
+    padding: clamp(23px, vw(96), 96px) 25px clamp(20px, vw(40), 40px);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 52% 40%;
+    column-gap: 8%;
+    align-items: center;
+
+    @media screen and (max-width: $break-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      @media screen and (max-width: $break-max-mobile) {
+        display: none;
+      }
+
+      .persona {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .right {
+      .tag {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-orange-light;
+        border-radius: 999px;
+        padding: clamp(7px, vw(8), 8px) clamp(17px, vw(18), 18px) clamp(7px, vw(8), 8px) clamp(10px, vw(16), 16px);
+        width: fit-content;
+        margin-bottom: clamp(8px, vw(24), 24px);
+
+        @media screen and (max-width: $break-max-mobile) {
+          margin-left: unset;
+        }
+
+        svg {
+          width: clamp(19px, vw(28), 28px);
+          height: auto;
+          margin-right: 8px;
+        }
+
+        p {
+          flex: 1;
+          font-weight: 300;
+          font-size: clamp(12px, vw(18), 18px);
+          margin: 0;
+          color: $color-orange;
+        }
+      }
+
+      .img-logo {
+        width: clamp(180px, vw(411), 411px);
+        height: auto;
+        margin-bottom: clamp(18px, vw(48), 48px);
+
+        @media screen and (max-width: $break-max-mobile) {
+          width: 217px;
+          margin-bottom: 25px;
+        }
+      }
+
+      .txt-1 {
+        font-weight: 700;
+        font-size: clamp(13px, vw(20), 20px);
+        margin-bottom: 1.2em;
+
+        @media screen and (max-width: $break-max-mobile) {
+          font-size: 20px;
+        }
+      }
+
+      .card {
+        width: 100%;
+        background-color: $color-secondary;
+        box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.20);
+        border-radius: clamp(24px, vw(24), 24px);
+        padding: clamp(13px, vw(20), 20px);
+        margin-bottom: clamp(16px, vw(16), 16px);
+
+        @media screen and (max-width: $break-max-mobile) {
+          padding: 20px;
+        }
+
+        &.last {
+          margin-bottom: clamp(33px, vw(66), 66px);
+
+          @media screen and (max-width: $break-max-mobile) {
+            margin-bottom: 66px;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-weight: 300;
+          font-size: clamp(13px, vw(20), 20px);
+
+          @media screen and (max-width: $break-max-mobile) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .txt-2 {
+        font-weight: 300;
+        font-size: clamp(20px, vw(40), 40px);
+        margin-bottom: 0.8em;
+
+        @media screen and (max-width: $break-max-mobile) {
+          font-size: 24px;
+        }
+      }
+
+      .btn-access {
+        background-color: $color-orange;
+        border-radius: clamp(5px, vw(8), 8px);
+        border-bottom: solid clamp(4px, vw(5), 5px) #D74F42;
+        font-weight: 300;
+        font-size: clamp(13px, vw(20), 20px);
+        color: $color-secondary;
+        text-align: center;
+        padding: 0.5em 1.2em;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-color: #ec6155;
+        }
+      }
+    }
+  }
+}

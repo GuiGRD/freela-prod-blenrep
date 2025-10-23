@@ -1,0 +1,164 @@
+.section-eficacia-estudos {
+  position: relative;
+  padding: 0;
+
+  .content {
+    display: grid;
+    grid-template-columns: 54% 37%;
+    column-gap: 9%;
+    padding: clamp(23px, vw(53), 53px) clamp(25px, vw(51), 51px) 0 clamp(25px, vw(245), 245px);
+
+    @media screen and (max-width: $break-tablet) {
+      padding: clamp(23px, vw(53), 53px) 25px 0;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .left {
+      .tag {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-orange-light;
+        border-radius: 999px;
+        padding: clamp(7px, vw(8), 8px) clamp(17px, vw(18), 18px) clamp(7px, vw(8), 8px) clamp(10px, vw(16), 16px);
+        width: fit-content;
+        margin-bottom: clamp(8px, vw(24), 24px);
+
+        @media screen and (max-width: $break-max-mobile) {
+          margin-left: unset;
+        }
+
+        svg {
+          width: clamp(19px, vw(28), 28px);
+          height: auto;
+          margin-right: 8px;
+        }
+
+        p {
+          flex: 1;
+          font-weight: 300;
+          font-size: clamp(12px, vw(18), 18px);
+          margin: 0;
+          color: $color-orange;
+        }
+      }
+
+      h2 {
+        font-weight: 200;
+        font-size: clamp(22px, vw(60), 60px);
+        color: $color-primary;
+        margin-bottom: 0.26em;
+        line-height: 1.23em;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: clamp(13px, vw(24), 24px);
+        color: $color-gray;
+        margin: 0;
+      }
+    }
+
+    .right {
+      position: relative;
+
+      @media screen and (max-width: $break-max-mobile) {
+        display: none;
+      }
+
+      .image {
+        position: absolute;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .cards {
+    position: relative;
+    padding: 0 clamp(25px, vw(245), 245px);
+    margin-top: clamp(46px, vw(76), 76px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 27px;
+    row-gap: 16px;
+
+    @media screen and (max-width: $break-tablet) {
+      padding: 0 25px;
+    }
+
+    @media screen and (max-width: $break-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      border: solid clamp(1px, vw(2), 2px);
+      border-radius: clamp(15px, vw(32), 32px);
+      padding: clamp(14px, vw(30), 30px) clamp(24px, vw(50), 50px);
+      background-color: $color-secondary;
+
+      h3 {
+        text-align: center;
+        font-size: clamp(20px, vw(40), 40px);
+        margin-bottom: 0.6em;
+      }
+
+      p {
+        font-size: clamp(11px, vw(20), 20px);
+        text-align: center;
+        margin-bottom: 1.25em;
+
+        &.last {
+          margin-bottom: 2em;
+        }
+      }
+
+      .cta {
+        display: block;
+        margin: 0 auto;
+        font-family: $font-Poppins;
+        font-weight: 300;
+        font-size: clamp(9px, vw(20), 20px);
+        text-align: center;
+        color: $color-secondary;
+        border: none;
+        outline: none;
+        background-color: $color-orange;
+        border-bottom: solid clamp(2.5px, vw(5), 5px) #D74F42;
+        border-radius: clamp(4px, vw(8), 8px);
+        cursor: pointer;
+        padding: clamp(5px, vw(10), 10px) clamp(11px, vw(24), 24px);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-color: #e8594c;
+        }
+      }
+
+      &--1 {
+        border-color: $color-orange;
+      }
+
+      &--2 {
+        border-color: $color-green-dark;
+
+        h3 {
+          color: $color-green-dark;
+        }
+
+        .cta {
+          background-color: $color-green-dark;
+          border-color: #275125;
+
+          &:hover {
+            background-color: #1d671a;
+          }
+        }
+      }
+    }
+  }
+}

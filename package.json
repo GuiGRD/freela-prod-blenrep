@@ -1,0 +1,35 @@
+{
+  "title": "GSK | Blenrep",
+  "name": "GSK | Blenrep",
+  "description": "GSK | Blenrep",
+  "main": "index.php",
+  "author": "GSK | Blenrep",
+  "homepage": "",
+  "license": "ISC",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.0.1",
+    "browserslist": "^4.14.5",
+    "caniuse-lite": "^1.0.30001137",
+    "dotenv": "^8.2.0",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "2.0.9",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "3.0.2",
+    "sass": "^1.55.0"
+  }
+}

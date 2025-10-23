@@ -1,0 +1,8 @@
+@use "sass:math";
+
+@function vw($width) {
+  $result: 0;
+  $result: calc(($width * 100) / 1920);
+
+  @return $result + vw;
+}

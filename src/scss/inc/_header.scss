@@ -1,0 +1,109 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(30px, vw(50), 50px);
+  background-color: $color-secondary;
+  z-index: 9;
+  padding: 0 clamp(33px, vw(66), 66px);
+  border-bottom: solid 1px #EDEDED;
+
+  @media screen and (max-width: $break-max-mobile) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .breadcumb {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media screen and (max-width: $break-max-mobile) {
+      display: none;
+    }
+
+    &__item {
+      font-family: $font-Poppins;
+      font-weight: 400;
+      font-size: clamp(11px, vw(15), 15px);
+      margin: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      position: relative;
+
+      &--active {
+        font-weight: 700;
+        pointer-events: none;
+
+        &::after {
+          content: "";
+          height: clamp(2px, vw(4), 4px);
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $color-orange;
+        }
+      }
+    }
+
+    &__line {
+      width: 1px;
+      height: clamp(13px, vw(16), 16px);
+      background-color: $color-primary;
+      margin: 0 clamp(8px, vw(16), 16px);
+    }
+  }
+
+  .logo-gsk {
+    width: 78px;
+    height: auto;
+    display: none;
+
+    @media screen and (max-width: $break-max-mobile) {
+      display: block;
+    }
+  }
+
+  .menu-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    display: none;
+
+    @media screen and (max-width: $break-max-mobile) {
+      display: flex;
+    }
+
+    .bar1, .bar2, .bar3 {
+      width: 100%;
+      height: 2px;
+      background: $color-orange;
+      transition: all .3s ease-in-out;
+      border-radius: 9px;
+    }
+
+    &.active {
+      .bar1 {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .bar2 {
+        opacity: 0;
+      }
+
+      .bar3 {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
