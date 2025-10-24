@@ -356,6 +356,30 @@ if($('body').hasClass('png-mieloma')) {
       }
     });
   });
+
+  const numeros = document.querySelectorAll('.an-numero');
+
+  numeros.forEach((el) => {
+    const valorFinal = parseFloat(el.dataset.numero);
+    const isPercent = el.textContent.includes('%');
+
+    gsap.fromTo(el, 
+      { textContent: 0 }, 
+      { 
+        textContent: valorFinal,
+        duration: 1.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+        },
+        snap: { textContent: 1 },
+        onUpdate: function() {
+          el.textContent = Math.floor(el.textContent) + (isPercent ? "%" : "");
+        }
+      }
+    );
+  });
 }
 else if ($('body').hasClass('png-mecanismo')) {
   function onYouTubeIframeAPIReady() {
