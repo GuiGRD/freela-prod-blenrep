@@ -198,6 +198,19 @@ $(document).ready(function() {
     $(".jsBtnMenu").removeClass('active');
     $('.menu').removeClass('active');
   });
+
+  $('.jsScrollTop').on('click', function() {
+    $("html, body").animate(
+    {
+      scrollTop: 0,
+    },
+    750,
+    "swing",
+    function () {
+      $("html, body").off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+    }
+  );
+  })
 });
 
 (function() {
@@ -497,6 +510,15 @@ else if ($('body').hasClass('png-eficacia')) {
       freeMode: true,
       scrollbar: {
         el: ".swiper-scrollbar-graph-3",
+      }
+    });
+
+    var swiper3 = new Swiper(".swiper-graph-4", {
+      direction: "horizontal",
+      slidesPerView: "auto",
+      freeMode: true,
+      scrollbar: {
+        el: ".swiper-scrollbar-graph-4",
       }
     });
 

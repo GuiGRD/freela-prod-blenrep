@@ -84,6 +84,21 @@ p {
   margin-bottom: 1em;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: clamp(10px, vw(22), 22px);
+  right: clamp(15px, vw(32), 32px);
+  width: clamp(40px, vw(80), 80px);
+  height: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
 .loader {
   position: fixed;
   top: 0;
