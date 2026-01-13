@@ -38,13 +38,26 @@
   }
 
   h2 {
-    font-weight: 200;
+    font-weight: 300;
     font-size: clamp(22px, vw(40), 40px);
     color: $color-primary;
-    margin: 0 auto 2.2em;
+    margin: 0 auto 0.4em;
     line-height: 1.23em;
     text-align: center;
     max-width: 27.5em;
+
+    @media screen and (max-width: $break-max-mobile) {
+      text-align: left;
+    }
+  }
+
+  .txt-subtitle {
+    font-weight: 300;
+    font-size: clamp(16px, vw(24), 24px);
+    color: #696969;
+    margin: 0 auto 3.33em;
+    text-align: center;
+    max-width: 38em;
 
     @media screen and (max-width: $break-max-mobile) {
       text-align: left;
@@ -136,6 +149,18 @@
   .swiper-graph-2 {
     .swiper-scrollbar-drag {
       background-color: $color-green-dark !important;
+    }
+  }
+
+  .txt-right {
+    font-weight: 300;
+    font-size: clamp(10px, vw(14), 14px);
+    color: $color-gray;
+    text-align: right;
+    margin: 0;
+
+    @media screen and (max-width: $break-max-mobile) {
+      padding-top: 20px;
     }
   }
 }

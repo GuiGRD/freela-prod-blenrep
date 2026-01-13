@@ -57,7 +57,7 @@
     color: $color-gray;
     margin: 0 auto 1.37em;
     text-align: center;
-    max-width: 37em;
+    max-width: 41em;
 
     @media screen and (max-width: $break-max-mobile) {
       text-align: left;
@@ -124,10 +124,10 @@
     }
 
     .content {
-      padding: clamp(20px, vw(40), 40px) clamp(20px, vw(40), 40px) clamp(40px, vw(82), 82px);
+      padding: clamp(20px, vw(40), 40px) clamp(20px, vw(72), 72px) clamp(20px, vw(40), 40px);
       position: relative;
       z-index: 1;
-      width: 67%;
+      width: 100%;
 
       @media screen and (max-width: $break-max-mobile) {
         width: 100%;
@@ -138,7 +138,7 @@
         p {
           font-weight: 700;
           text-align: center;
-          font-size: clamp(16px, vw(24), 24px);
+          font-size: clamp(16px, vw(32), 32px);
           margin-bottom: 1.25em;
           color: $color-orange;
         }
@@ -154,9 +154,8 @@
           }
 
           .img-1 {
-            width: clamp(279px, vw(365), 365px);
+            width: clamp(359px, vw(749), 749px);
             height: auto;
-            // margin-right: clamp(70px, vw(167), 167px);
 
             @media screen and (max-width: $break-max-mobile) {
               margin-bottom: 55px;
@@ -164,7 +163,7 @@
           }
 
           .img-2 {
-            width: clamp(215px, vw(321), 321px);
+            width: clamp(235px, vw(449), 449px);
             height: auto;
 
             @media screen and (max-width: $break-max-mobile) {
@@ -179,7 +178,7 @@
         height: 2px;
         background-color: #696969;
         border-radius: 99px;
-        margin: clamp(22px, vw(30), 30px) 0;
+        margin: clamp(22px, vw(60), 60px) 0;
 
         @media screen and (max-width: $break-max-mobile) {
           height: 1.5px;
@@ -190,25 +189,26 @@
         p {
           font-weight: 700;
           text-align: center;
-          font-size: clamp(16px, vw(24), 24px);
+          font-size: clamp(16px, vw(32), 32px);
           margin: 0 auto 1.25em;
-          color: $color-green-dark;
+          color: $color-orange;
           max-width: 28em;
         }
 
         .imgs {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
 
           @media screen and (max-width: $break-max-mobile) {
             flex-direction: column;
           }
 
           .swiper {
+            margin: 0;
             max-width: 100%;
             padding-bottom: 20px;
-
+            
             .swiper-wrapper {
               display: flex;
               
@@ -223,14 +223,15 @@
                 }
 
                 .grafico {
-                  width: 100%;
+                  width: auto;
                   
                   img {
-                    width: 100%;
+                    width: clamp(469px, vw(895), 895px);
 
                     @media screen and (max-width: $break-max-mobile) {
                       width: 100%;
                       min-width: 469px;
+                      max-width: 600px;
                     }
                   }
                 }
@@ -252,25 +253,21 @@
             }
           }
 
-          .card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #CECECE;
-            border-radius: clamp(18px, vw(24), 24px);
-            padding: clamp(24px, vw(30), 30px) clamp(12px, vw(17), 17px);
-            width: clamp(150px, vw(219), 219px);
+
+          p {
+            text-align: left;
+            font-size: clamp(14px, vw(23), 23px);
+            color: $color-primary;
+            font-weight: 300;
+            margin: 0;
+            width: auto;
+            max-width: 12.5em;
+            margin-left: 2.7em;
 
             @media screen and (max-width: $break-max-mobile) {
+              margin-left: 0;
+              max-width: unset;
               margin-top: 24px;
-            }
-
-            p {
-              text-align: center;
-              font-size: clamp(10px, vw(13), 13px);
-              color: $color-primary;
-              font-weight: 300;
-              margin: 0;
             }
           }
         }
@@ -304,10 +301,10 @@
     }
 
     .content {
-      padding: clamp(20px, vw(40), 40px) clamp(20px, vw(40), 40px) clamp(40px, vw(82), 82px);
+      padding: clamp(20px, vw(40), 40px) clamp(20px, vw(72), 72px) clamp(20px, vw(40), 40px);
       position: relative;
       z-index: 1;
-      width: 67%;
+      width: 100%;
 
       @media screen and (max-width: $break-max-mobile) {
         width: 100%;
@@ -317,49 +314,73 @@
       .top {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
         width: 100%;
 
         @media screen and (max-width: $break-max-mobile) {
           flex-direction: column;
         }
 
-        .img-1 {
-          width: clamp(279px, vw(425), 425px);
-          height: auto;
-
-          @media screen and (max-width: $break-max-mobile) {
-            margin-bottom: 55px;
-          }
+        p {
+          font-weight: 700;
+          color: $color-green-dark;
+          text-align: center;
+          font-size: clamp(16px, vw(32), 32px);
+          margin-bottom: 1.25em;
+          max-width: 28em;
         }
 
-        .right {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          
-          p {
-            font-weight: 700;
-            color: $color-green-dark;
-            text-align: center;
-            font-size: clamp(16px, vw(19), 19px);
-            margin-bottom: 1.57em;
+        .imgs {
+          justify-content: space-between;
+
+          .swiper {
+            margin: 0;
+            max-width: 100%;
+            padding-bottom: 20px;
+            
+            .swiper-wrapper {
+              display: flex;
+              
+              .swiper-slide {
+                width: 99%;
+                height: auto;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+
+                @media screen and (max-width: $break-max-mobile) {
+                  width: auto;
+                }
+
+                .grafico {
+                  width: auto;
+                  
+                  img {
+                    width: clamp(469px, vw(895), 895px);
+                    margin: 0;
+
+                    @media screen and (max-width: $break-max-mobile) {
+                      width: 100%;
+                      min-width: 469px;
+                      max-width: 600px;
+                    }
+                  }
+                }
+              }
+            }
+            
           }
 
-          .card {
-            display: flex;
-            align-items: center;
-            background-color: #ccc1a881;
-            border-radius: clamp(18px, vw(24), 24px);
-            padding: clamp(24px, vw(37), 37px) clamp(12px, vw(54), 54px);
-            width: clamp(245px, vw(355), 355px);
+          .swiper-scrollbar-drag {
+            background-color: $color-green-dark !important;
+          }
+          
+          .img-2 {
+            width: clamp(180px, vw(296), 296px);
+            height: auto;
 
-            p {
-              text-align: center;
-              font-size: clamp(13px, vw(18), 18px);
-              color: $color-primary;
-              font-weight: 300;
-              margin: 0;
+            @media screen and (max-width: $break-max-mobile) {
+              margin-top: 20px;
+              width: 250px;
             }
           }
         }
@@ -380,30 +401,31 @@
       .bottom {
         p {
           max-width: 29em;
+          color: $color-green-dark;
         }
 
         .imgs {
-          justify-content: space-between;
+          justify-content: center;
 
-          .swiper {
-            max-width: clamp(450px, vw(573), 573px);
-
-            @media screen and (max-width: $break-max-mobile) {
-              max-width: 100%;
-            }
-          }
-
-          .swiper-scrollbar-drag {
-            background-color: $color-green-dark !important;
-          }
-          
           .img-2 {
-            width: clamp(130px, vw(196), 196px);
+            width: clamp(410px, vw(756), 756px);
             height: auto;
+          }
+
+          p {
+            text-align: left;
+            font-size: clamp(14px, vw(23), 23px);
+            color: $color-primary;
+            font-weight: 700;
+            margin: 0;
+            width: auto;
+            max-width: 12.5em;
+            margin-left: 2.7em;
 
             @media screen and (max-width: $break-max-mobile) {
+              margin-left: 0;
+              max-width: unset;
               margin-top: 24px;
-              width: 200px;
             }
           }
         }

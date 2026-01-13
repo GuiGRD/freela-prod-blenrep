@@ -4,8 +4,8 @@
 
   .content {
     display: grid;
-    grid-template-columns: 54% 37%;
-    column-gap: 9%;
+    grid-template-columns: 59% 37%;
+    column-gap: 4%;
     padding: clamp(23px, vw(53), 53px) clamp(25px, vw(51), 51px) 0 clamp(25px, vw(245), 245px);
 
     @media screen and (max-width: $break-tablet) {
@@ -47,18 +47,10 @@
         }
       }
 
-      h2 {
-        font-weight: 200;
-        font-size: clamp(22px, vw(60), 60px);
-        color: $color-primary;
-        margin-bottom: 0.26em;
-        line-height: 1.23em;
-      }
-
       p {
         font-weight: 300;
-        font-size: clamp(13px, vw(24), 24px);
-        color: $color-gray;
+        font-size: clamp(13px, vw(40), 40px);
+        color: $color-primary;
         margin: 0;
       }
     }
@@ -81,7 +73,7 @@
   .cards {
     position: relative;
     padding: 0 clamp(25px, vw(245), 245px);
-    margin-top: clamp(46px, vw(76), 76px);
+    margin-top: clamp(46px, vw(168), 168px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 27px;

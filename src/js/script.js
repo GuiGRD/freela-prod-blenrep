@@ -399,7 +399,7 @@ else if ($('body').hasClass('png-mecanismo')) {
     currentPlayer = new YT.Player('yt-video', {
       width: '100%',
       height: '100%',
-      videoId: 'zqwxYjuEtaY',
+      videoId: 'PISvph3VK30',
       playerVars: {
         autoplay: 0,
         rel: 0,
