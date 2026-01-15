@@ -461,7 +461,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.8);
       // backdrop-filter: blur(5px);
     }
 
@@ -514,9 +514,13 @@
       .swiper {
         display: block;
         height: auto;
+        max-height: 85dvh;
 
         .swiper-wrapper {
           .swiper-slide {
+            max-height: 85dvh;
+            overflow-y: auto;
+
             .title {
               text-align: center;
               font-weight: 700;
@@ -540,7 +544,8 @@
             p.txt-bottom {
               font-weight: 300;
               font-size: clamp(8px, vw(14), 14px);
-              margin: 0;
+              margin: 0 auto;
+              max-width: clamp(700px, 52.0833333333vw, 1000px);
             }
           }
         }
@@ -551,13 +556,14 @@
         cursor: pointer;
         line-height: unset;
         height: auto;
+        width: unset;
 
         &:after {
           display: none;
         }
 
         svg {
-          width: clamp(25px, vw(50), 50px);
+          width: clamp(25px, vw(45), 45px);
           height: auto;
         }
 
@@ -576,6 +582,7 @@
           left: 50%;
           transform: translate(-105px, 122%);
           height: fit-content;
+          width: fit-content;
         }
       }
 
@@ -589,6 +596,7 @@
           left: 50%;
           transform: translate(75px, 122%);
           height: fit-content;
+          width: fit-content;
         }
       }
 

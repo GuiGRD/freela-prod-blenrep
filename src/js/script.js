@@ -404,7 +404,7 @@ else if ($('body').hasClass('png-mecanismo')) {
         autoplay: 0,
         rel: 0,
         modestbranding: 1,
-        controls: 0,
+        controls: 1,
         showinfo: 0,
         fs: 1
       },
